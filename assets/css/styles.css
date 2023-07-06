@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  body {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "aside" "filtro" "main" "footer";
+    grid-template-rows: 8% 10% auto 8%;
+  }
+  aside {
+    grid-area: aside;
+    background-color: rgb(104, 150, 235);
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  menu {
+    display: none;
+  }
+  
+  i {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  .search-container {
+    grid-area: filtro;
+    background-color: rgb(89, 130, 208);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  select {
+    width: 80%;
+    border-radius: 3px;
+    padding: 6px 0;
+  }
+  
+  label {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  main {
+    grid-area: main;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  footer {
+    background-color: rgb(104, 150, 235);
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cartas2 {
+    display: none;
+  }
+  
+  .carta1 {
+    border: 0.5px solid #4b4948;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    border-radius: 0.25rem;
+  }
+  
+  .paginador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    cursor: pointer;
+  }
+  
+  .paginador a {
+    float: left;
+    padding: 8px 1rem;
+    border: 1px solid#202421;
+    margin: 0 5px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    text-decoration: none;
+  }
+  
+  .paginador a.active {
+    background-color: blue;
+    color: aliceblue;
+  }
+  
+  .carta1 img {
+    height: 15rem;
+  }
+  
+  .cartas2 img {
+    height: 15rem;
+  }
+  
+  button {
+    background-color: rgb(104, 150, 235);
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.9rem 1rem;
+    cursor: pointer;
+  }
+  
+  .carta1 img {
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    border-radius: 0.3rem;
+    filter: grayscale(100%);
+    transition: 0.5s ease;
+  }
+  .cartas2 img {
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    border-radius: 0.3rem;
+    filter: grayscale(100%);
+    transition: 0.5s ease;
+  }
+  .carta1:hover img {
+    filter: grayscale(0%);
+    transition: 1s ease;
+  }
+  .cartas2:hover img {
+    filter: grayscale(0%);
+    transition: 1s ease;
+  }
+  
+  .carta1 :hover {
+    transform: scale(1.08);
+  }
+  .cartas2 :hover {
+    transform: scale(1.08);
+  }
+  
+  .fa-solid {
+    animation: mover 2s;
+  }
+  
+  @keyframes mover {
+    0% {
+      transform: translateX(-150px);
+      animation-timing-function: ease-in;
+    }
+    75% {
+      transform: translateX(150px);
+      animation-timing-function: ease-in;
+    }
+    100% {
+      transform: translateX(0px);
+      animation-timing-function: ease-in;
+    }
+  }
+  
+  @media (min-width: 576px) {
+    body {
+      grid-template-areas: "aside filtro" "aside main" "footer main";
+      grid-template-columns: 20% 80%;
+      grid-template-rows: 8% auto 10%;
+    }
+  
+    aside {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 1.5rem;
+    }
+  
+    .bars {
+      display: none;
+    }
+  
+    menu {
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem;
+      font-size: 1.2rem;
+    }
+  
+    menu p {
+      line-height: 2.5rem;
+    }
+  
+    i {
+      font-size: 1.5rem;
+    }
+  
+    .search-container {
+      padding: 0.2px;
+    }
+  
+    select {
+      width: 100%;
+    }
+  
+    .texto-piedepagina {
+      font-size: 0.9rem;
+      text-align: center;
+      justify-content: space-around;
+    }
+  
+    .cartas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  
+    .carta1 {
+      width: 24%;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+  
+    .cartas2 {
+      border: 1px solid #202421;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 24%;
+      height: 20rem;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+  }
+  
